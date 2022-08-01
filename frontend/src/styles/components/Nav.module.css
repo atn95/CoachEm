@@ -1,0 +1,17 @@
+.container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 80px;
+	width: 100%;
+	position: fixed;
+	background-color: black;
+	min-height: 50px;
+}
+
+.link {
+	color: white;
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
