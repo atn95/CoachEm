@@ -1,4 +1,4 @@
-package server.controllers;
+package server.controllers.accounts;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,19 +10,16 @@ import java.util.List;
 import static server.constants.ServerConstant.API_ROUTE;
 
 @RestController
-@RequestMapping(path = API_ROUTE + "/test")
-public class TestController {
+@RequestMapping(path = API_ROUTE + "/user")
+public class AccountController {
 
-    private final TestServicer servicer;
+    private final AccountService accountService;
 
     @Autowired
-    public TestController(TestServicer servicer) {
-        this.servicer = servicer;
-    }
+    public AccountController(AccountService accountService){this.accountService = accountService;}
 
     @GetMapping
-    public List<Item> getItems() {
-        return TestServicer.getItems();
+    public List<Accounts> getUsers() {
+        return AccountService.getAccounts();
     }
-
 }
