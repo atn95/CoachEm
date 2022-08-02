@@ -1,9 +1,7 @@
 package server.controllers.accounts;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,7 +17,14 @@ public class AccountController {
     public AccountController(AccountService accountService){this.accountService = accountService;}
 
     @GetMapping
-    public List<Accounts> getUsers() {
-        return AccountService.getAccounts();
+    public List<Account> getUsers() {
+        return accountService.getAccounts();
+    }
+
+    @PostMapping("/register")//url = api/user/register
+    public void registerNewAccount(@RequestBody Account account) {
+        accountService.addNewStudent(account);
+        //account Cant get account to Map to Account Obj
+        System.out.println(account);
     }
 }
