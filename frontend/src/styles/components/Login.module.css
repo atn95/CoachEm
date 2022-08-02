@@ -1,0 +1,32 @@
+.container {
+	width: min(1400px, 90%);
+	margin: 0 auto;
+}
+
+.form {
+	width: min(600px, 90%);
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+.formItems {
+	min-height: 30px;
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.btn50 {
+	margin-top: 10px;
+	width: 50%;
+	height: 100%;
+	min-height: 30px;
+}
+
+.registerBtn {
+	width: 100%;
+	min-height: 30px;
+	height: 100%;
+}
