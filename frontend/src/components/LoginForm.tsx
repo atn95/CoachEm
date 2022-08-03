@@ -9,15 +9,15 @@ export const LoginForm = ({ formValue, handleChange, handleSubmit }: LoginFormPr
 				<label className={styles.formItems} htmlFor='username'>
 					Username
 				</label>
-				<input className={styles.formItems} value={formValue[0]} onChange={(e) => handleChange(e, 0)} type='text' name='username' id='username' />
+				<input className={styles.formItems} value={formValue[0]} onChange={(e) => handleChange(e, 0)} type='text' placeholder='username' name='username' id='username' />
 				<label className={styles.formItems} htmlFor='email'>
 					Email
 				</label>
-				<input className={styles.formItems} value={formValue[1]} onChange={(e) => handleChange(e, 1)} type='email' name='email' id='email' />
+				<input className={styles.formItems} value={formValue[1]} onChange={(e) => handleChange(e, 1)} type='email' placeholder='password' name='email' id='email' />
 				<label className={styles.formItems} htmlFor='password'>
 					Password
 				</label>
-				<input className={styles.formItems} value={formValue[2]} onChange={(e) => handleChange(e, 2)} type='password' name='password' id='password' />
+				<input className={styles.formItems} value={formValue[2]} onChange={(e) => handleChange(e, 2)} type='password' placeholder='email@email.com' name='password' id='password' />
 				<div className={styles.formItems}>
 					<button className={styles.btn50} type='submit'>
 						Login
