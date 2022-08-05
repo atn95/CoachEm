@@ -13,7 +13,7 @@ export const Nav = ({ logout }: { logout: React.MouseEventHandler<HTMLDivElement
 					About
 				</NavLink>
 			</div>
-			<div>
+			<div className={styles['link-container']}>
 				<div className={styles['link']} onClick={logout}>
 					Logout
 				</div>

@@ -8,7 +8,7 @@ import { User } from './logic/types';
 import { About } from './pages/About';
 import { Register } from './pages/Register';
 import { Settings } from './pages/Settings';
-import { setSourceMapRange } from 'typescript';
+import { ProfileBar } from './components/ProfileBar';
 
 function App() {
 	const [user, setUser] = useState<User | null>({
@@ -39,7 +39,7 @@ function App() {
 					</>
 				)}
 			</Routes>
-			{user ? <div className={styles['profile']}>Profile Bar</div> : <></>}
+			{user ? <ProfileBar /> : ''}
 		</div>
 	);
 }

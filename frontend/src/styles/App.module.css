@@ -1,6 +1,6 @@
 .container {
 	display: grid;
-	grid-template-columns: 0.25fr 5.25fr 1.5fr;
+	grid-template-columns: 7.5% 5.25fr 1.5fr;
 }
 
 .profile {
