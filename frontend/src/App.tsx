@@ -7,18 +7,30 @@ import { useState } from 'react';
 import { User } from './logic/types';
 import { About } from './pages/About';
 import { Register } from './pages/Register';
+import { Settings } from './pages/Settings';
+import { setSourceMapRange } from 'typescript';
 
 function App() {
-	const [user, letUser] = useState<User | null>(null);
+	const [user, setUser] = useState<User | null>({
+		//faking a login
+		id: 1,
+		username: '',
+		email: '',
+	});
+
+	const logout = () => {
+		setUser(null);
+	};
 
 	return (
 		<div className={styles.container}>
-			<Nav />
+			<Nav logout={logout} />
 			<Routes>
 				{user ? (
 					<>
 						<Route path='/' element={<Home />} />
 						<Route path='/about' element={<About />} />
+						<Route path='/settings' element={<Settings />} />
 					</>
 				) : (
 					<>
@@ -27,7 +39,7 @@ function App() {
 					</>
 				)}
 			</Routes>
-			<div className={styles['profile']}>Profile Bar</div>
+			{user ? <div className={styles['profile']}>Profile Bar</div> : <></>}
 		</div>
 	);
 }
