@@ -1,0 +1,13 @@
+.container {
+	display: grid;
+	grid-template-columns: 0.25fr 5.25fr 1.5fr;
+}
+
+.profile {
+	outline: 2px solid black;
+	height: 99%;
+	width: 95%;
+	justify-self: center;
+	align-self: center;
+	border-radius: 20px;
+}

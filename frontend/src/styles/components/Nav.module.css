@@ -1,17 +1,28 @@
 .container {
 	display: flex;
-	justify-content: flex-end;
+	flex-direction: column;
 	align-items: center;
-	padding-right: 80px;
+	justify-content: space-between;
 	width: 100%;
-	position: fixed;
-	background-color: black;
-	min-height: 50px;
+	border-right: 3px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	height: calc(100vh - 80px);
+	background-color: rgb(30, 30, 30);
 }
 
 .link {
-	color: white;
-	margin-left: 10px;
+	color: rgb(103, 106, 121);
 	text-decoration: none;
 	font-size: 1.5rem;
+	margin-bottom: 5px;
+}
+
+.link-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.active {
+	color: rgb(190, 190, 190);
 }

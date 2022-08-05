@@ -1,6 +1,6 @@
 import styles from '../styles/components/Login.module.css';
 import { Link } from 'react-router-dom';
-import { LoginFormProps } from '../datatype/types';
+import { LoginFormProps } from '../logic/types';
 
 export const LoginForm = ({ formValue, handleChange, handleSubmit }: LoginFormProps) => {
 	return (

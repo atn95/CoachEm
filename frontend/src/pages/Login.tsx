@@ -1,7 +1,7 @@
 import { LoginForm } from '../components/LoginForm';
 import styles from '../styles/components/Login.module.css';
 import React, { useState } from 'react';
-import { FormValue } from '../datatype/types';
+import { FormValue } from '../logic/types';
 export const Login = () => {
 	//[username, password, email]
 	const [formValue, setFormValue] = useState<FormValue>([``, ``, ``]);
